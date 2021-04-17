@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:get/get.dart';
 import 'package:getx_shoppapp/product.dart';
 import 'package:getx_shoppapp/service.dart';
@@ -12,9 +14,13 @@ class ProductController extends GetxController {
   }
 
   void FetchProduct() async {
-    var product = await RemoteService.fetchProduct();
-    if (product != null) {
-      productList.value = product;
+    try {
+      var product = await RemoteService.fetchProduct();
+      if (product != null) {
+        productList.value = product;
+      }
+    } finally {
+      print(e);
     }
   }
 }

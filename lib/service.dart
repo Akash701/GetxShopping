@@ -6,7 +6,7 @@ class RemoteService {
   static var client = http.Client();
   static Future<List<Welcome>> fetchProduct() async {
     var responce = await client
-        .get('https://makeup-api.herokuapp.com/api/v1/products.json.com');
+        .get('https://makeup-api.herokuapp.com/api/v1/products.json');
     if (responce.statusCode == 200) {
       var jasonString = responce.body;
       return welcomeFromJson(jasonString);

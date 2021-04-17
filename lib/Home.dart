@@ -41,6 +41,7 @@ class Home extends StatelessWidget {
                     mainAxisSpacing: 16,
                     crossAxisSpacing: 16,
                     itemBuilder: (context, index) {
+                      //Return the product here
                       return Container(
                         height: 200,
                         width: 100,
